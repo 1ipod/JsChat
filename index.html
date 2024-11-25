@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JsChat</title>
+    $lib
+</head>
+<body>
+    <h1>An alert is worth 1000 words.</h1>
+    <form hx-post="/send" hx-swap="none" style="border-style: solid;">
+        <label for="txt">Normal text</label>
+        <input type="text" name="txt" id="txt">
+        <label for="js">Litterally ANY javascript lol</label>
+        <input type="text" name="js" id="js">
+        <input type="submit">
+    </form>
+    <br>
+    <div style="border-style: solid;"><div hx-get="/recv?&state=0"hx-trigger="load delay:0.1s"hx-swap="outerHTML"></div></div>
+</body>
+</html>
